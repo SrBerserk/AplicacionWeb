@@ -22,6 +22,8 @@
         <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña"th:field="*{pass}"/>
         
         <div th:if="${error!=null}" class="alert alert-danger" role="alert">Credenciales incorrectas!</div>
+        <div th:if="${logout!=null}" class="alert alert-info" role="alert">Logout con Exito</div>
+        
         
         <button class="btn btn-lg btn-primary btn-block" type="submit">
             <span class="glyphicon glyphicon-Log-in" aria-hidden="true"></span> Entrar
