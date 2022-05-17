@@ -26,11 +26,11 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
+					<tr th:each=" u : ${users}">
+						<td th:text= "${u.nombre}"></td>
+						<td th:text= "${u.apellidos}"></td>
+						<td th:text= "${u.telefono}"></td>
+						<td th:text= "${u.correo}"></td>
 						<td>
 							<button type="button" class="btn btn-default">
 								<span class="glyphicon gl yphicon-pencil" aria-hidden="true"></span>

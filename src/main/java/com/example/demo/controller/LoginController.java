@@ -31,7 +31,7 @@ public class LoginController {
 	public String Check(@ModelAttribute(name="credenciales") Credenciales credenciales) {
 		
 		if(credenciales.getNombre().equals("paco") && credenciales.getPass().equals("234")) {		
-		 return "users";
+		 return "redirect:/usuarios/listadousers";
 		} else {
 			return "redirect:/login?error";
 		}
