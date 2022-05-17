@@ -23,10 +23,16 @@ public class UsuariosController {
 	private UsuariosService usuariosService;
 
 	@GetMapping("/usersform")
-	public String UsersForm(Model model) {
-		model.addAttribute("usuarios", new Usuarios());
+	public String UsersForm(Model model,
+			@RequestParam(name="id",required=true)int id) {
+		
+		Usuarios us = new Usuarios();
+		if(id!=0) {
+			us = usuariosService.findUsuariosById(id);
+			
+		}
+		model.addAttribute("usuarios", us);		
 		return "usersform";
-
 	}
 
 	@PostMapping("/addusuarios")
