@@ -11,4 +11,8 @@ public interface UsuariosService {
 	
 	public abstract List<Usuarios> ListAllUsuarios();
 	
+	public abstract Usuarios findUsuariosById(int id);
+	
+	public abstract void removeUsuarios(int id);
+	
 }

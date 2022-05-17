@@ -34,4 +34,22 @@ public class UsuariosServiceImpl implements UsuariosService{
 		return users;
 	}
 
+
+	@Override
+	public Usuarios findUsuariosById(int id) {
+		return usuariosRepository.findById(id);
+	}
+
+
+	@Override
+	public void removeUsuarios(int id) {
+		
+		Usuarios us = findUsuariosById(id);
+		
+		if(null!= us) {
+			usuariosRepository.delete(us);
+		}
+		
+	}
+
 }
